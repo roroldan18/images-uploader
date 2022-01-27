@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from 'axios';
 import {Message} from './Message.js';
 import {ProgressBar} from './ProgressBar.js';
+import { axiosInstance } from "./config.js";
 
 
 export const App = () => {
@@ -24,7 +25,7 @@ export const App = () => {
     formData.append('file', file);
 
     try {
-      const res = await axios.post('/uploadImage', formData, {
+      const res = await axiosInstance.post('/uploadImage', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },
