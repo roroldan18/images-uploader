@@ -1,5 +1,4 @@
 import { useState } from "react";
-import axios from 'axios';
 import {Message} from './Message.js';
 import {ProgressBar} from './ProgressBar.js';
 import { axiosInstance } from "./config.js";
