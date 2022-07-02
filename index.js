@@ -4,6 +4,7 @@ import fs from 'fs';
 import uniquid from 'uniqid';
 import path from 'path';
 import {fileURLToPath} from 'url';
+import cors from 'cors';
 
 
 
@@ -11,6 +12,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(fileUpload());
+app.use(cors());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
